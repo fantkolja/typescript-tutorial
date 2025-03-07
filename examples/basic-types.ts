@@ -163,6 +163,18 @@ function getLongest<Type extends { length: number }>(a: Type, b: Type) {
   return a.length >= b.length ? a : b;
 }
 
+// works with classes as well
+class Box<T> {
+  value: T;
+  constructor(value: T) {
+    this.value = value;
+  }
+}
+
+// and with interfaces
+interface Boxed<T> {
+  value: T;
+}
 
 // unknown
 function f1(a: any) {
