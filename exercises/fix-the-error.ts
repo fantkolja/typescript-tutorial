@@ -99,9 +99,9 @@ type UserKeys = "id" | "name";
 let user: Optional<UserKeys> = {};
 
 
-// FINAL BOSS
-function mapValues<T, U>(obj: Record<string, T>, fn: (val: T) => U): Record<string, U> {
-  let result: Record<string, U> = {};
+// FINAL BOSS: add types
+function mapValues(obj, fn) {
+  let result = {};
   for (let key in obj) {
     result[key] = fn(obj[key]);
   }
@@ -110,4 +110,4 @@ function mapValues<T, U>(obj: Record<string, T>, fn: (val: T) => U): Record<stri
 
 const numbers = { a: 1, b: 2, c: 3 };
 const doubled = mapValues(numbers, (n) => n.toString());
-const invalid = mapValues(numbers, (n) => n * "2");
+const invalid = mapValues(numbers, (n) => n * 2);

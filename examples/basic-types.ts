@@ -205,3 +205,36 @@ function fn(x: string | number) {
     x; // has type 'never'!
   }
 }
+
+
+
+
+// Types from types
+
+// keyof
+type Point = { x: number; y: number };
+type P = keyof Point;
+
+// typeof
+// typeof from JS
+console.log(typeof "Hello world");
+
+// typeof from TS
+let s = "hello";
+let n: typeof s;
+
+
+// indexed access type
+type Person = { age: number; name: string; alive: boolean };
+type Age = Person["age"];
+
+interface SimilarToArray {
+  [index: number]: string;
+  customLength: number;
+}
+
+type SimilarToArrayLength = SimilarToArray['customLength']; // number
+type SimilarToArrayValue = SimilarToArray[number]; // string
+
+const a: SimilarToArrayValue = '1';
+
