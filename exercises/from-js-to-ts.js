@@ -22,7 +22,7 @@ const worker = {
 // the follwoing function should support both number and string
 // and should be callable as `add(5, 10);` or `add('a', 'b');`
 function add(a, b) {
-	return a + b;
+	return `${a} : ${b}`;
 }
 
 // use generics to return a correct type
