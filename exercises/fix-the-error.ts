@@ -109,5 +109,5 @@ function mapValues(obj, fn) {
 }
 
 const numbers = { a: 1, b: 2, c: 3 };
-const doubled = mapValues(numbers, (n) => n.toString());
-const invalid = mapValues(numbers, (n) => n * 2);
+const stringified = mapValues(numbers, (n) => n.toString());
+const doubled = mapValues(numbers, (n) => n * 2);
