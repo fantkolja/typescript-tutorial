@@ -38,10 +38,6 @@ enum Colors {
 }
 let favoriteColor: Colors = "Blue";
 
-// fix types
-let value: any = "hello";
-let num: number = value as number;
-
 // fix implementation
 let data: [number, string] = ["hello", 42];
 
